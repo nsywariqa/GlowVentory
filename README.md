@@ -1,76 +1,108 @@
-# Project: Glowventory
+# Glowventory
+**Sistem Manajemen Inventori untuk Skincare Store (MVP)**
+
+---
 
 ## Tim
-- **Nasywa Ariqa Ridha**  
-- **Adha Gusti Harmadhan**  
-- **Alieyyah Maysarah**  
-- **Putri Balqis**
+- Nasywa Ariqa Ridha
+- Adha Gusti Harmadhan
+- A'lieyya Maysarah 
+- Putri Balqis
 
 ---
 
-## Latar Belakang  
-Industri skincare semakin berkembang pesat dengan banyaknya produk yang beredar di pasaran. Skincare store sebagai penyedia produk menghadapi tantangan dalam mengelola stok barang, baik dari sisi ketersediaan, kedaluwarsa, maupun pergerakan barang keluar dan masuk.  
-Sering kali, pemilik toko kesulitan memantau stok secara real-time sehingga mengakibatkan masalah seperti:  
-- Over-stok (stok menumpuk dan berisiko kedaluwarsa)  
-- Kehabisan stok produk populer  
-- Data stok yang tidak akurat karena pencatatan manual  
+## 1. Latar Belakang
 
-**Glowventory** hadir sebagai solusi digital untuk membantu skincare store dalam mengelola inventori produk secara efisien, real-time, dan terstruktur.
+Industri kosmetik di Indonesia menunjukkan pertumbuhan yang signifikan. Pada tahun 2019, sektor industri kimia, farmasi, dan obat tradisional mengalami kenaikan sebesar 18,57%, dengan nilai produk domestik bruto (PDB) mencapai Rp22,26 triliun pada kuartal IV tahun 2019. Sebagian besar dari sektor ini didominasi oleh industri kecil dan menengah (IKM), yang berjumlah lebih dari 760 perusahaan. Namun, Seiring dengan pertumbuhan tersebut, toko skincare menghadapi berbagai tantangan dalam mengelola stok barang, antara lain:
+
+- **Over-stok**: Produk menumpuk dan mendekati tanggal kedaluwarsa, meningkatkan risiko kerugian.  
+- **Kehabisan stok produk populer**: Menurunkan kepuasan pelanggan dan potensi penjualan.  
+- **Data stok yang tidak akurat**: Pencatatan manual yang rawan kesalahan, menghambat pengambilan keputusan yang tepat.
+
+Glowventory hadir sebagai solusi digital untuk membantu pemilik dan staf toko dalam memantau, mencatat, dan mengelola stok secara **real-time, efisien, dan terstruktur**, serta memungkinkan pelanggan **melihat ketersediaan produk melalui katalog**.
 
 ---
 
-## Fitur (MVP)
+## 2. Ruang Lingkup MVP
+- **Admin (Pemilik Toko)**: full akses (manajemen produk, stok, laporan, manajemen user)  
+- **Staff**: input barang masuk/keluar, update stok, melihat laporan stok terbatas  
+- **Pelanggan**: hanya dapat melihat **katalog produk** dan menggunakan **fitur pencarian**  
+- **Transaksi stok** dimasukkan manual oleh staff (tidak ada integrasi POS)  
 
-### 1. Manajemen Produk  
-- Tambah, edit, dan hapus produk skincare  
-- Informasi lengkap produk: nama, kategori, harga, stok, tanggal kedaluwarsa  
+
+---
+
+## 3. Fitur Utama
+
+### 3.1 Manajemen Produk
+- Tambah, edit, hapus produk skincare  
+- Data produk meliputi: nama, kategori, harga, stok, tanggal kedaluwarsa  
 - Upload gambar produk untuk identifikasi lebih mudah  
 
-### 2. Manajemen Stok  
-- Update stok barang secara otomatis ketika ada transaksi  
-- Notifikasi stok menipis  
-- Peringatan produk mendekati tanggal kedaluwarsa  
+### 3.2 Manajemen Stok
+- Update stok secara manual saat barang masuk/keluar  
+- Pencatatan riwayat stok untuk monitoring  
+- Notifikasi stok rendah bagi admin/staff  
 
-### 3. Laporan & Analitik  
-- Laporan penjualan harian, mingguan, dan bulanan  
+### 3.3 Laporan & Analitik
+- Laporan stok harian, mingguan, dan bulanan  
 - Statistik produk terlaris dan kurang laku  
 - Grafik pergerakan stok  
 
-### 4. User Role Management  
-- Admin: mengelola semua fitur  
-- Staff: terbatas pada update stok dan input transaksi  
+### 3.4 Multiuser Role
+- **Admin**: akses penuh  
+- **Staff**: akses terbatas (input transaksi, update stok, lihat laporan)  
+- **Pelanggan**: akses terbatas ke **katalog produk** dan **pencarian produk**  
 
-### 5. Pencarian & Filter Produk  
-- Cari produk berdasarkan nama/kategori  
-- Filter berdasarkan stok, kedaluwarsa, atau harga  
+### 3.5 Pencarian & Filter Produk
+- Pencarian produk berdasarkan nama atau kategori  
+- Filter produk berdasarkan stok tersedia, kategori, atau harga
+### 3.6 Notifikasi
 
----
+- **Admin & Staff:**  
+  - Pemberitahuan ketika stok suatu produk mencapai batas minimum (stok menipis).  
+  - Membantu staf/admin mengambil tindakan cepat untuk restock.
 
-## Arsitektur Teknis  
-
-### Backend Stack  
-- **Laravel 12 (PHP Framework)**  
-- **MySQL (Database)**  
-- **Redis (Cache & Queue)**  
-
-### Frontend Stack  
-- **Tailwind CSS**  
-- **Blade Templating**  
-
-### Package Tambahan  
-- **Spatie Laravel Permission** (User Role Management)  
-- **Laravel Excel** (Export/Import laporan stok)  
-- **Chart.js** (Visualisasi data laporan)  
+- **Pelanggan:**  
+  - Pemberitahuan jika produk yang sebelumnya kosong sudah tersedia kembali.  
+  - Memberikan kemudahan bagi pelanggan untuk memantau ketersediaan produk favorit melalui katalog.
+  
 
 ---
 
-## Value Tambahan
-- Mengurangi risiko kerugian akibat produk kedaluwarsa  
-- Efisiensi operasional dengan sistem pencatatan digital  
-- Mendukung keputusan bisnis dengan data analitik  
-- Meningkatkan kepuasan pelanggan dengan stok yang selalu terjaga  
+## 4. Arsitektur Teknis
+
+### Backend Stack
+- Laravel 12 (PHP Framework)  
+- MySQL (Database)  
+
+### Frontend Stack
+- Blade Templating  
+- Tailwind CSS  
+
+### Package Tambahan
+- Spatie Laravel Permission (manajemen role & permission)  
+- Laravel Excel (ekspor laporan stok)  
+- Chart.js (visualisasi data stok & laporan)  
 
 ---
 
-## Ringkasan
-**Glowventory** adalah sistem manajemen inventori yang didesain khusus untuk skincare store. Dengan fitur manajemen produk, stok, laporan, hingga analitik, sistem ini akan membantu pemilik toko mengelola usahanya dengan lebih efektif dan mengurangi risiko kerugian.  
+## 5. Manfaat
+
+### Bagi Pemilik Toko / Admin
+- Memantau stok dengan lebih mudah dan akurat  
+- Mengurangi risiko kerugian akibat produk menumpuk atau kedaluwarsa  
+- Memudahkan pengambilan keputusan berbasis data  
+
+### Bagi Staff
+- Input transaksi lebih cepat, pencatatan digital minim kesalahan  
+- Monitoring stok menjadi lebih mudah  
+
+### Bagi Pelanggan
+- Bisa melihat ketersediaan produk sebelum datang ke toko  
+- Pencarian produk membuat pengalaman browsing lebih efisien  
+
+---
+
+## 6. Ringkasan
+Glowventory adalah sistem manajemen inventori yang dirancang untuk toko skincare. MVP ini memungkinkan pengelolaan stok, pencatatan transaksi, laporan analitik, dan **katalog produk untuk pelanggan**, tanpa integrasi POS atau fitur belanja online. Sistem ini membantu pemilik toko dan staff mengelola usaha dengan lebih efektif, serta memberikan pelanggan akses terbatas untuk melihat produk yang tersedia.
