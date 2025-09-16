@@ -1,15 +1,11 @@
 # Glowventory
 **Sistem Manajemen Inventori untuk Skincare Store (MVP)**
 
----
-
 ## Tim
-- Nasywa Ariqa Ridha
-- Adha Gusti Harmadhan
-- A'lieyya Maysarah 
-- Putri Balqis
-
----
+- Nasywa Ariqa Ridha (Ketua)
+- Adha Gusti Harmadhan (Anggota)
+- A'lieyya Maysarah (Anggota)
+- Putri Balqis (Anggota)
 
 ## 1. Latar Belakang
 
@@ -21,7 +17,6 @@ Industri kosmetik di Indonesia menunjukkan pertumbuhan yang signifikan. Pada tah
 
 Glowventory hadir sebagai solusi digital untuk membantu pemilik dan staf toko dalam memantau, mencatat, dan mengelola stok secara **real-time, efisien, dan terstruktur**, serta memungkinkan pelanggan **melihat ketersediaan produk melalui katalog**.
 
----
 
 ## 2. Ruang Lingkup MVP
 - **Admin (Pemilik Toko)**: full akses (manajemen produk, stok, laporan, manajemen user)  
@@ -29,8 +24,6 @@ Glowventory hadir sebagai solusi digital untuk membantu pemilik dan staf toko da
 - **Pelanggan**: hanya dapat melihat **katalog produk** dan menggunakan **fitur pencarian**  
 - **Transaksi stok** dimasukkan manual oleh staff (tidak ada integrasi POS)  
 
-
----
 
 ## 3. Fitur Utama
 
@@ -66,9 +59,7 @@ Glowventory hadir sebagai solusi digital untuk membantu pemilik dan staf toko da
 - **Pelanggan:**  
   - Pemberitahuan jika produk yang sebelumnya kosong sudah tersedia kembali.  
   - Memberikan kemudahan bagi pelanggan untuk memantau ketersediaan produk favorit melalui katalog.
-  
 
----
 
 ## 4. Arsitektur Teknis
 
@@ -85,8 +76,6 @@ Glowventory hadir sebagai solusi digital untuk membantu pemilik dan staf toko da
 - Laravel Excel (ekspor laporan stok)  
 - Chart.js (visualisasi data stok & laporan)  
 
----
-
 ## 5. Manfaat
 
 ### Bagi Pemilik Toko / Admin
@@ -102,7 +91,6 @@ Glowventory hadir sebagai solusi digital untuk membantu pemilik dan staf toko da
 - Bisa melihat ketersediaan produk sebelum datang ke toko  
 - Pencarian produk membuat pengalaman browsing lebih efisien  
 
----
 
 ## 6. Ringkasan
 Glowventory adalah sistem manajemen inventori yang dirancang untuk toko skincare. MVP ini memungkinkan pengelolaan stok, pencatatan transaksi, laporan analitik, dan **katalog produk untuk pelanggan**, tanpa integrasi POS atau fitur belanja online. Sistem ini membantu pemilik toko dan staff mengelola usaha dengan lebih efektif, serta memberikan pelanggan akses terbatas untuk melihat produk yang tersedia.
