@@ -4,7 +4,7 @@
 ## Tim
 - Nasywa Ariqa Ridha (Ketua)
 - Adha Gusti Harmadhan (Anggota)
-- A'lieyya Maysarah (Anggota)
+- A'llieya Maysarah (Anggota)
 - Putri Balqis (Anggota)
 
 ## 1. Latar Belakang
